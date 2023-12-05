@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import ImgSlider from "./components/pages/main/ImgSlider";
+const App = () => {
+    const slides = [
+        { url: "http://localhost:3000/mainImg/img1.jpg", title: "beach" },
+        { url: "http://localhost:3000/mainImg/img2.jpg", title: "boat" },
+        { url: "http://localhost:3000/mainImg/img3.jpg", title: "forest" },
+    ];
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <div>
+            <div className="containerStyles">
+                <ImgSlider slides={slides} />
+            </div>
+        </div>
+    );
+};
 
 export default App;
